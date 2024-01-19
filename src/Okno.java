@@ -13,10 +13,7 @@ public class Okno
             int x = (dim.width - getWidth()) / 2;
             int y = (dim.height - getHeight()) / 2;
             setLocation(x, y);
-            JPanel tlo = new JPanel();
-            tlo.setBackground(Color.gray);
-            tlo.setVisible(true);
-            add(tlo);
+
             //----------------------------------------------
             JPanel kontakt1 = new JPanel();
             kontakt1.setBounds(100,50, 600,100);
@@ -56,9 +53,13 @@ public class Okno
             kontakt4.setBackground(Color.yellow);
             kontakt4.setVisible(true);
             add(kontakt4);
+            add(label);
 
             //----------------------------------------------
-
+//            JPanel tlo = new JPanel();
+//            tlo.setBackground(Color.gray);
+//            tlo.setVisible(true);
+//            add(tlo);
         }
     }
 }
