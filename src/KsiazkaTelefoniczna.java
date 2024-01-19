@@ -27,11 +27,17 @@ public class KsiazkaTelefoniczna extends Metody
     {
         super.dodajSluzbowy();
     }
-    static Okno frame = new Okno();
-
+    public static class Okno extends JFrame
+    {
+        Okno()
+        {
+            JFrame frame = new JFrame();
+            frame.setVisible(true);
+            frame.setBounds(100,100,100,100);
+        }
+    }
     public static void main(String[] args) throws IOException {
-
-        SwingUtilities.invokeLater(new frame.okno());
+        new Okno();
         KsiazkaTelefoniczna ksiazka = new KsiazkaTelefoniczna();
         ksiazka.wybierzKsiazke();
         System.out.println( ANSI_CYAN + "KSIAZKA TELEFONICZNA"
