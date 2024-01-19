@@ -3,6 +3,8 @@
  */
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -25,10 +27,11 @@ public class KsiazkaTelefoniczna extends Metody
     {
         super.dodajSluzbowy();
     }
-
+    static Okno frame = new Okno();
 
     public static void main(String[] args) throws IOException {
 
+        SwingUtilities.invokeLater(new frame.okno());
         KsiazkaTelefoniczna ksiazka = new KsiazkaTelefoniczna();
         ksiazka.wybierzKsiazke();
         System.out.println( ANSI_CYAN + "KSIAZKA TELEFONICZNA"
