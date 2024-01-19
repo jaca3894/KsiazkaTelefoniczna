@@ -3,6 +3,31 @@ import java.awt.*;
 
 public class Okno
 {
+    public static class panelKontaktu extends JPanel
+    {
+        panelKontaktu(int height, JFrame frame, Color color, String index, String name)
+        {
+            setBounds(100, height, 600,100);
+            setVisible(true);
+            setBackground(color);
+
+            Box box = Box.createVerticalBox();
+
+            JLabel index1 = new JLabel(index);
+            index1.setVisible(true);
+            box.add(index1);
+            this.add(Box.createVerticalStrut(90));
+
+            JLabel name1 = new JLabel(name);
+            name1.setVisible(true);
+            box.add(name1);
+            this.add(Box.createVerticalStrut(50));
+            this.add(box);
+
+            frame.add(this);
+            frame.pack();
+        }
+    }
     public static class MyFrame extends JFrame {
         public MyFrame() {
             super("Tytuł okna");
@@ -14,52 +39,12 @@ public class Okno
             int y = (dim.height - getHeight()) / 2;
             setLocation(x, y);
 
-            //----------------------------------------------
-            JPanel kontakt1 = new JPanel();
-            kontakt1.setBounds(100,50, 600,100);
-            kontakt1.setBackground(Color.yellow);
-            kontakt1.setVisible(true);
-            //----------------------------------------------
-            JLabel label = new JLabel("kontakt nr: 1", SwingConstants.CENTER);
-            label.setVisible(true);
-            label.setBounds(350,50,100,10);
-            add(label);
-            add(kontakt1);
-            JLabel label2 = new JLabel("kontakt nr: 2", SwingConstants.CENTER);
-            label2.setVisible(true);
-            label2.setBounds(350,200,100,10);
-            add(label2);
-            JLabel label3 = new JLabel("kontakt nr: 3", SwingConstants.CENTER);
-            label3.setVisible(true);
-            label3.setBounds(350,350,100,10);
-            add(label3);
+            new panelKontaktu(100, this, Color.gray, "1", "artur");
+            new panelKontaktu(300, this, Color.green, "2", "marcin");
+            new panelKontaktu(500, this, Color.yellow, "3", "andrzej");
+            new panelKontaktu(700, this, Color.red, "4", "wiktoria");
 
-            // y: +150
-            //----------------------------------------------
-            JPanel kontakt2 = new JPanel();
-            kontakt2.setBounds(100,200,600,100);
-            kontakt2.setBackground(Color.red);
-            kontakt2.setVisible(true);
-            add(kontakt2);
-            //----------------------------------------------
-            JPanel kontakt3 = new JPanel();
-            kontakt3.setBounds(100,350,600,100);
-            kontakt3.setBackground(Color.gray);
-            kontakt3.setVisible(true);
-            add(kontakt3);
-            //----------------------------------------------
-            JPanel kontakt4 = new JPanel();
-            kontakt4.setBounds(100,500,600,100);
-            kontakt4.setBackground(Color.yellow);
-            kontakt4.setVisible(true);
-            add(kontakt4);
-            add(label);
-
-            //----------------------------------------------
-//            JPanel tlo = new JPanel();
-//            tlo.setBackground(Color.gray);
-//            tlo.setVisible(true);
-//            add(tlo);
+            add(new Label());
         }
     }
 }

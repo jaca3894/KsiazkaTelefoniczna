@@ -1,0 +1,20 @@
+[
+	{
+		"imie":"marcin",
+		"nazwisko":"wachtarczyk",
+		"miejscowosc":"radlin2",
+		"numerPierwszy":"123456789",
+		"numerDrugi":"1234567890",
+		"numerTrzeci":"6",
+		"numerSluzbowy":"12345"
+	},
+	{
+		"imie":"1",
+		"nazwisko":"2",
+		"miejscowosc":"3",
+		"numerPierwszy":"4",
+		"numerDrugi":"5",
+		"numerTrzeci":"6",
+		"numerSluzbowy":"brak"
+	}
+]

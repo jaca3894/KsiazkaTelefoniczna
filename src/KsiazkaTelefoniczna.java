@@ -29,7 +29,7 @@ public class KsiazkaTelefoniczna extends Metody
         super.dodajSluzbowy();
     }
     public static void main(String[] args) throws IOException {
-        Okno.MyFrame frame = new Okno.MyFrame();
+        SwingUtilities.invokeLater(Okno.MyFrame::new);
         KsiazkaTelefoniczna ksiazka = new KsiazkaTelefoniczna();
         ksiazka.wybierzKsiazke();
         System.out.println( ANSI_CYAN + "KSIAZKA TELEFONICZNA"
