@@ -5,6 +5,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -32,8 +33,47 @@ public class KsiazkaTelefoniczna extends Metody
         Okno()
         {
             JFrame frame = new JFrame();
+            frame.setResizable(false);
+            frame.setTitle("super okno");
+            frame.setSize(800,600);
+            frame.setLocation(100,100);
             frame.setVisible(true);
-            frame.setBounds(100,100,100,100);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            //----------------------------------------------
+            JPanel kontakt1 = new JPanel();
+            kontakt1.setBounds(100,50, 600,100);
+            kontakt1.setBackground(Color.yellow);
+            kontakt1.setVisible(true);
+
+            //----------------------------------------------
+            JLabel label = new JLabel("kontakt nr: 1", SwingConstants.CENTER);
+            label.setVisible(true);
+            label.setBounds(350,350,100,10);
+            JLabel label2 = new JLabel("kontakt nr: 2", SwingConstants.CENTER);
+            label2.setVisible(true);
+            label2.setBounds(350,100,100,10);
+            frame.add(label);
+            frame.add(label2);
+            frame.add(kontakt1);
+            // y: +150
+            //----------------------------------------------
+            JPanel kontakt2 = new JPanel();
+            kontakt2.setBounds(100,200,600,100);
+            kontakt2.setBackground(Color.red);
+            kontakt2.setVisible(true);
+            frame.add(kontakt2);
+            //----------------------------------------------
+            JPanel kontakt3 = new JPanel();
+            kontakt3.setBounds(100,350,600,100);
+            kontakt3.setBackground(Color.green);
+            kontakt3.setVisible(true);
+            frame.add(kontakt3);
+            //----------------------------------------------
+            JPanel tlo = new JPanel();
+            tlo.setBackground(Color.gray);
+            tlo.setVisible(true);
+            frame.add(tlo);
+
         }
     }
     public static void main(String[] args) throws IOException {
