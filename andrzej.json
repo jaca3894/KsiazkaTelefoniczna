@@ -1,0 +1,29 @@
+[
+	{
+		"imie":"OLAF",
+		"nazwisko":"b",
+		"miejscowosc":"radlin2",
+		"numerPierwszy":"123456789",
+		"numerDrugi":"1234567890",
+		"numerTrzeci":"6",
+		"numerSluzbowy":"12345"
+	},
+	{
+		"imie":"andrzej",
+		"nazwisko":"macha",
+		"miejscowosc":"1",
+		"numerPierwszy":"2",
+		"numerDrugi":"3",
+		"numerTrzeci":"4",
+		"numerSluzbowy":"brak"
+	},
+	{
+		"imie":"artur",
+		"nazwisko":"ciemno",
+		"miejscowosc":"1",
+		"numerPierwszy":"2",
+		"numerDrugi":"33333333",
+		"numerTrzeci":"4",
+		"numerSluzbowy":"brak"
+	}
+]
